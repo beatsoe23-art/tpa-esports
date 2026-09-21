@@ -1,65 +1,25 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>TPA Esports — 2026</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TPA Esports · 冠军巡回赛数据库</title>
+<meta name="theme-color" content="#080a10">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><span class="dot"></span>TPA <small>ESPORTS</small></div>
+  <a class="brand" href="#/"><span class="brand-mark">TPA</span><span>ESPORTS</span></a>
   <nav>
-    <a href="#home">首页</a><a href="#events">赛事</a><a href="#teams">战队</a>
-    <a href="#rankings">积分榜</a><a href="#calendar">赛程</a><a href="#history">冠军历史</a>
+    <a href="#/">首页</a><a href="#/events">赛事</a><a href="#/schedule">赛程</a>
+    <a href="#/teams">战队</a><a href="#/rankings">排名</a><a href="#/history">历届冠军</a>
   </nav>
+  <button class="menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
 </header>
-
-<main>
-<section id="home" class="hero">
-  <div>
-    <p class="eyebrow">TPA COMPETITIVE ECOSYSTEM</p>
-    <h1>2026<br><span>TPA ESPORTS</span></h1>
-    <p class="lead">赛事、战队、积分与赛程，一站式查看。</p>
-    <div class="actions"><a class="btn primary" href="#events">查看赛事</a><a class="btn" href="#rankings">积分榜</a></div>
-  </div>
-  <div class="hero-card"><span>SEASON</span><strong>2026</strong><small>CN · PAC · EMEA · AMER</small></div>
-</section>
-
-<section class="stats">
-  <div><b>4</b><span>主要赛区</span></div>
-  <div><b>10</b><span>积分榜展示</span></div>
-  <div><b>11</b><span>2026 日历节点</span></div>
-  <div><b>2026</b><span>当前赛季</span></div>
-</section>
-
-<section id="events" class="section">
-  <div class="section-head"><div><p class="eyebrow">EVENTS</p><h2>2026 赛事</h2></div></div>
-  <div id="eventGrid" class="grid cards"></div>
-</section>
-
-<section id="teams" class="section alt">
-  <div class="section-head"><div><p class="eyebrow">TEAMS</p><h2>重点战队</h2></div><input id="teamSearch" placeholder="搜索战队 / 赛区"></div>
-  <div id="teamGrid" class="grid team-grid"></div>
-</section>
-
-<section id="rankings" class="section">
-  <div class="section-head"><div><p class="eyebrow">COMBAT POWER</p><h2>战队战力榜</h2></div></div>
-  <div class="table-wrap"><table><thead><tr><th>#</th><th>战队</th><th>积分</th><th>赛区</th></tr></thead><tbody id="rankingBody"></tbody></table></div>
-</section>
-
-<section id="calendar" class="section alt">
-  <div class="section-head"><div><p class="eyebrow">CALENDAR</p><h2>2026 赛历</h2></div></div>
-  <div id="calendarList" class="timeline"></div>
-</section>
-
-<section id="history" class="section">
-  <div class="section-head"><div><p class="eyebrow">HISTORY</p><h2>冠军历史</h2></div></div>
-  <div id="historyGrid" class="grid cards"></div>
-</section>
-</main>
-
-<footer><span>TPA ESPORTS</span><span>2026 Competitive Archive</span></footer>
-<script src="app.js"></script>
-</body>
-</html>
+<main id="app"></main>
+<footer>
+  <div><b>TPA ESPORTS</b> · Championship Tour Database</div>
+  <div>核心资料来源：用户提供《TPA战队档案.pdf》 · 站点结构参考现代电竞赛事索引</div>
+</footer>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
