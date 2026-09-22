@@ -555,7 +555,8 @@ window.TPA_DATA = {
         "NRG"
       ],
       "format": "赛制补全：8队瑞士轮 → 4队双败淘汰；系列赛以 BO3/BO5 为主，决赛 BO5。",
-      "source": "《TPA战队档案.pdf》P15：Madrid 2024 · MG 3:0 Sentinels"
+      "source": "《TPA战队档案.pdf》P15：Madrid 2024 · MG 3:0 Sentinels",
+      "finalScore": "3:0"
     },
     {
       "id": "tci-chengdu-2024",
@@ -578,7 +579,8 @@ window.TPA_DATA = {
         "TH"
       ],
       "format": "赛制补全：8支二/三号种子进入瑞士轮，2胜晋级；4支晋级队 + 4支一号种子进入8队双败淘汰，决赛 BO5。",
-      "source": "《TPA战队档案.pdf》P15：Chengdu 2024 · MG 3:1 BLG"
+      "source": "《TPA战队档案.pdf》P15：Chengdu 2024 · MG 3:1 BLG",
+      "finalScore": "3:1"
     },
     {
       "id": "masters-paris-2024",
@@ -601,7 +603,8 @@ window.TPA_DATA = {
         "Sentinels"
       ],
       "format": "赛制补全：8队瑞士轮 → 4队双败淘汰；决赛 BO5。",
-      "source": "《TPA战队档案.pdf》P15：Paris 2024 · E1 3:1 LNG"
+      "source": "《TPA战队档案.pdf》P15：Paris 2024 · E1 3:1 LNG",
+      "finalScore": "3:1"
     },
     {
       "id": "finals-london-2024",
@@ -632,7 +635,8 @@ window.TPA_DATA = {
         "MIBR"
       ],
       "format": "赛制补全：16队分4组，每组4队双败；8队晋级后进行8队双败淘汰；决赛 BO5。",
-      "source": "《TPA战队档案.pdf》P15：London 2024 · EDG 3:2 TH"
+      "source": "《TPA战队档案.pdf》P15：London 2024 · EDG 3:2 TH",
+      "finalScore": "3:2"
     },
     {
       "id": "masters-bangkok-2025",
@@ -651,7 +655,8 @@ window.TPA_DATA = {
         "AllGamers"
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
-      "source": "PDF p10"
+      "source": "PDF p10",
+      "finalScore": "3:1"
     },
     {
       "id": "tci-vancouver-2025",
@@ -674,7 +679,8 @@ window.TPA_DATA = {
         "DRG"
       ],
       "format": "8队瑞士轮 → 8队双败淘汰",
-      "source": "PDF p11"
+      "source": "PDF p11",
+      "finalScore": "3:2"
     },
     {
       "id": "masters-toronto-2025",
@@ -693,7 +699,8 @@ window.TPA_DATA = {
         "NRG"
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
-      "source": "PDF p12"
+      "source": "PDF p12",
+      "finalScore": "3:2"
     },
     {
       "id": "finals-chengdu-2025",
@@ -724,7 +731,8 @@ window.TPA_DATA = {
         "MIBR"
       ],
       "format": "16队分组双败 → 8队双败淘汰",
-      "source": "PDF p13"
+      "source": "PDF p13",
+      "finalScore": "3:2"
     },
     {
       "id": "masters-pusan-2026",
@@ -743,7 +751,8 @@ window.TPA_DATA = {
         "MG Esports"
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
-      "source": "PDF p16；PDF标题/日期存在排版冲突，以2026赛历页为主"
+      "source": "PDF p16；PDF标题/日期存在排版冲突，以2026赛历页为主",
+      "finalScore": "3:1"
     },
     {
       "id": "tci-london-2026",
@@ -766,7 +775,8 @@ window.TPA_DATA = {
         "SUNING"
       ],
       "format": "8队瑞士轮 → 8队双败淘汰",
-      "source": "PDF p17；页面日期字段与赛历页存在冲突"
+      "source": "PDF p17；页面日期字段与赛历页存在冲突",
+      "finalScore": "3:2"
     },
     {
       "id": "masters-santiago-2026",
@@ -787,7 +797,8 @@ window.TPA_DATA = {
         "TH"
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
-      "source": "PDF p18"
+      "source": "PDF p18",
+      "finalScore": "3:2"
     },
     {
       "id": "finals-allen-2026",
@@ -801,7 +812,8 @@ window.TPA_DATA = {
       "mvp": "待赛",
       "teams": [],
       "format": "资格赛 → 排名赛 → 小组双败 → 淘汰赛双败",
-      "source": "PDF p19–20"
+      "source": "PDF p19–20",
+      "finalScore": "TBD"
     }
   ],
   "calendar2026": [
@@ -2021,5 +2033,1251 @@ window.TPA_DATA = {
         "BO5"
       ]
     ]
+  },
+  "globalHistory": [
+    [
+      "2013",
+      "Los Angeles",
+      "Sentinels",
+      "3:1",
+      "Fnatic"
+    ],
+    [
+      "2014",
+      "Los Angeles",
+      "E1 Pulse",
+      "3:0",
+      "Loud"
+    ],
+    [
+      "2015",
+      "Tallahassee",
+      "Fnatic",
+      "3:2",
+      "RNG"
+    ],
+    [
+      "2015",
+      "Seoul",
+      "E1 Pulse",
+      "3:2",
+      "Team Envy"
+    ],
+    [
+      "2016",
+      "Shanghai",
+      "E1 Pulse",
+      "3:2",
+      "Team Envy"
+    ],
+    [
+      "2016",
+      "Paris",
+      "Fnatic",
+      "3:1",
+      "RNG"
+    ],
+    [
+      "2017",
+      "São Paulo",
+      "E1 Pulse",
+      "3:1",
+      "MicGaming"
+    ],
+    [
+      "2017",
+      "Chicago / NYC",
+      "MicGaming",
+      "3:2",
+      "E1 Pulse"
+    ],
+    [
+      "2018",
+      "Berlin / Paris",
+      "RNG",
+      "3:1",
+      "PaperRex"
+    ],
+    [
+      "2018",
+      "Shanghai",
+      "RareAtom",
+      "3:0",
+      "Fnatic"
+    ],
+    [
+      "2019",
+      "Los Angeles",
+      "G2",
+      "3:2",
+      "Sentinels"
+    ],
+    [
+      "2019",
+      "Madrid",
+      "FPX",
+      "3:0",
+      "G2"
+    ],
+    [
+      "2020",
+      "—",
+      "EDG",
+      "3:1",
+      "FPX"
+    ],
+    [
+      "2020",
+      "Shanghai",
+      "MicGaming",
+      "3:1",
+      "SUNING"
+    ],
+    [
+      "2021",
+      "Reykjavík",
+      "Sentinels",
+      "3:1",
+      "Team Envy"
+    ],
+    [
+      "2021",
+      "Reykjavík",
+      "SUNING",
+      "3:2",
+      "PaperRex"
+    ],
+    [
+      "2021",
+      "Berlin",
+      "Gambit",
+      "3:1",
+      "E1"
+    ],
+    [
+      "2021",
+      "Reykjavík",
+      "E1",
+      "3:2",
+      "PaperRex"
+    ],
+    [
+      "2022",
+      "Reykjavík",
+      "OTG",
+      "3:1",
+      "Loud"
+    ],
+    [
+      "2022",
+      "Busan",
+      "Loud",
+      "3:2",
+      "E1"
+    ],
+    [
+      "2022",
+      "Copenhagen",
+      "FPX",
+      "3:1",
+      "PaperRex"
+    ],
+    [
+      "2022",
+      "Atlanta",
+      "DRX",
+      "3:2",
+      "E1"
+    ],
+    [
+      "2023",
+      "Japan",
+      "JDG",
+      "3:1",
+      "WBG"
+    ],
+    [
+      "2023",
+      "London",
+      "JDG",
+      "3:1",
+      "BLG"
+    ],
+    [
+      "2023",
+      "Beijing",
+      "JDG",
+      "3:0",
+      "EG"
+    ],
+    [
+      "2023",
+      "Seoul",
+      "E1",
+      "3:0",
+      "WBG"
+    ]
+  ],
+  "playerMeta": {
+    "Anko": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Gochan": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Deoks": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Jiwoo": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Pgg": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "LK": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Lemin": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Knight": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Canny": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "ON": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Zika": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Adar": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Ruar": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Elk": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Lele": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Bodon": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Leke": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Beym": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Guss": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Kedaya": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "IG.Xiu": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Dard": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Detasil": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Viscount": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Gofer": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Siwoo": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "JDG.Keem": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Marsaq": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Domino": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Famdom": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Gzk": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Polan": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Xiaohao": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "EDG.Stay": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Mark": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Hoya": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Keyfor": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Pout": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Kip": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Photic": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Corechek": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Tang": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Weky": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Zhiqiuyi": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Struggle": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "shone": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Swai": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Suwi": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Jiwan": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Nus": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Frenetic": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Werock": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Dawn": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Sit": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Mey": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Vyrin": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Kaelo": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Zylen": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Aelix": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Rivenn": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Amael": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Lzen": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Xlix": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Mren": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Erax": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Nlen": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Tory": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Lory": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Vrax": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Tevr": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Vvex": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Alyn": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Aael": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Hrto": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Hsil": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Xian": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Xiapeng": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Legoz": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Meros": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Sadd": {
+      "nationality": "档案未注明",
+      "region": "CN"
+    },
+    "Decade": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Vickey": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Striver": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Peys": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Omsow": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Cfor": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Waivar": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Tars": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Brand": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Wishpro": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Astr1x": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Vexion": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Nyxus": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Oris": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Tace": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Zyne": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Vekt": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Nox": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Oren": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Tycho": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Dax": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Eon": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Fynn": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Gage": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Hale": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Kael": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Lyle": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Myles": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Nyle": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Oryn": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Baron": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Duke": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Ask": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Earl": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Princes": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Rex": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Sian": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Troy": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Uly": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Vance": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Yule": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Zev": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Blaze": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Drift": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Glitch": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Jolt": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Lumen": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Maven": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Onyx": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Pulse": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Surge": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Tempest": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Unity": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Vortex": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Wraith": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Zeal": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Avox": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Elyx": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Kyrax": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Vex": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Stratos": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Apex": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Nexus": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Cipher": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Karma": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Kaze": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Tako": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Lumi": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Astra": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Cosmo": {
+      "nationality": "档案未注明",
+      "region": "PAC"
+    },
+    "Fenix": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Gryph": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Helix": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Iris": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Jester": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Myth": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Nova": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Orion": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Phenix": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Quest": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Titan": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Umbra": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Valor": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Wyvern": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Xeno": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Breaker": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Hunter": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Slayer": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Chaser": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Drifter": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "NightHawk": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Storm": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Frost": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Ghost": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Reaper": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Prometh": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Odin": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Thorin": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Loki": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Valyk": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Kosi": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Suli": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Bora": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Huko": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Riku": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Piko": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Vilo": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Juri": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Tora": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Niko": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Eira": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Orin": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Kiro": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Yano": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Solace": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Silas": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Renly": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Theron": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Calen": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Miren": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Elara": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Maren": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Vallen": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Soren": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "Kaelen": {
+      "nationality": "档案未注明",
+      "region": "EMEA"
+    },
+    "M0rra": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Th3is": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Vyrth": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Lyr4": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "K0ve": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Cvlt": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Duskv": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "F0rn": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Gvld": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Hvnt": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Lvnd": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Mvne": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Nvll": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Orvth": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Halcyon": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Ardent": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Rivulet": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Seneca": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Calder": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Alvira": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Fenrir": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Galvyn": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Harlow": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Isolde": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Jovian": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Merrick": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Novara": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Osprey": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Paxton": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Quinlan": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Thorne": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Ulric": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Verdin": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Wylan": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Xavian": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Averin": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Bastian": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Cillian": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Darien": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Ewanic": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Brvno": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Mavr": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Elthar": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Ryvok": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Ciann": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Luvik": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "T0ren": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Fael": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Kivyn": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Marv": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Dyran": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Yvrik": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Alvor": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Qyran": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Nevok": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Sevyr": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Brith": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Mylen": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Tevor": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    },
+    "Vylar": {
+      "nationality": "档案未注明",
+      "region": "AMER"
+    }
   }
 };

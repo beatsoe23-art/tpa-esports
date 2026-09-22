@@ -1,141 +1,82 @@
 
-const D=window.TPA_DATA;
-const app=document.querySelector("#app");
-const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-const regionName={CN:"CN赛区",PAC:"Pacific赛区",EMEA:"EMEA赛区",AMER:"AMER赛区"};
-function logo(team){
-  for(const [r,arr] of Object.entries(D.teams)){
-    const i=arr.indexOf(team);
-    if(i>=0) return `assets/logos/${r.toLowerCase()}_${String(i+1).padStart(2,"0")}.png`;
-  }
-  return "";
-}
-function teamObj(team){
-  for(const [r,arr] of Object.entries(D.teams)) if(arr.includes(team)) return {region:r};
-  return {region:""};
-}
-function teamCard(team){
-  const t=teamObj(team), players=D.rosters[team]||[];
-  return `<a class="card team-card" href="#/team/${encodeURIComponent(team)}">
-    ${logo(team)?`<img class="logo" src="${logo(team)}">`:`<div class="logo">${esc(team.slice(0,3))}</div>`}
-    <div><h3>${esc(team)}</h3><p>${regionName[t.region]||""} · ${players.length?players.join(" / "):"档案名单"}</p></div>
-  </a>`;
+const D=window.TPA_DATA, app=document.querySelector('#app');
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const regions={CN:'CN',PAC:'PACIFIC',EMEA:'EMEA',AMER:'AMERICAS'};
+function findRegion(t){for(const [r,a] of Object.entries(D.teams))if(a.includes(t))return r;return '';}
+function logo(t){for(const [r,a] of Object.entries(D.teams)){const i=a.indexOf(t);if(i>=0)return `assets/logos/${r.toLowerCase()}_${String(i+1).padStart(2,'0')}.png`}return ''}
+function teamCard(t){
+ const r=findRegion(t), ps=D.rosters[t]||[];
+ return `<a class="card team-card" href="#/team/${encodeURIComponent(t)}"><img class="logo" src="${logo(t)}"><div><h3>${esc(t)}</h3><p>${regions[r]||r} · ${ps.length}名档案选手</p></div></a>`;
 }
 function eventCard(e){
- return `<a class="card event-card" href="#/event/${e.id}">
-  <div><span class="tag">${e.year} · ${esc(e.type)}</span><div class="event-title">${esc(e.name)}</div><div class="event-meta">${esc(e.date)}<br>${esc(e.city)}</div></div>
-  <div class="champ">冠军 <b>${esc(e.champion)}</b>　亚军 ${esc(e.runner)}</div>
- </a>`;
+ return `<a class="card event-card" href="#/event/${e.id}"><div><span class="tag">${e.year} · ${esc(e.type||'国际赛')}</span><div class="event-title">${esc(e.name)}</div><div class="event-meta">${esc(e.date||'档案未提供日期')} · ${esc(e.city||'')}</div></div><div class="champ"><span>冠军</span> <b>${esc(e.champion)}</b>　<span>亚军</span> <b>${esc(e.runner)}</b>${e.finalScore?`　<span class="score-chip">${esc(e.finalScore)}</span>`:''}</div></a>`;
 }
 function home(){
- const recent=[...D.international].reverse().slice(0,4);
+ const recent=[...D.international].reverse().slice(0,6);
  return `<div class="container">
-  <section class="hero">
-   <div class="eyebrow">TPA CHAMPIONSHIP TOUR · DATABASE</div>
-   <h1>像职业赛事官网一样，<br>把 TPA 做成完整赛事索引。</h1>
-   <p>赛事、常规赛、赛程、淘汰赛、战队、阵容、排名、历届冠军全部集中管理。世界赛对阵严格取自你的 PDF；四大赛区常规赛按统一联赛框架补齐，冠军与亚军沿用档案。</p>
-  </section>
-  <div class="hero-grid">
-   <div class="card">
-    <div class="eyebrow">2026 SEASON</div><h2>四大赛区 × 地区赛 + 国际赛</h2>
-    <p class="muted">CN / Pacific / EMEA / AMER · KickOff → Stage 1 → TCI / Masters → Stage 2 → Finals</p>
-    <div class="stat-grid" style="margin-top:18px">
-      <div class="stat"><strong>4</strong><span>主要赛区</span></div><div class="stat"><strong>54</strong><span>档案战队</span></div><div class="stat"><strong>2021–26</strong><span>地区赛事索引</span></div><div class="stat"><strong>8</strong><span>国际赛事页面</span></div>
-    </div>
-   </div>
-   <div class="card"><div class="eyebrow">2026 CALENDAR</div>${D.calendar2026.slice(0,6).map(x=>`<div style="padding:10px 0;border-bottom:1px solid var(--line)"><b>${x[0]}</b>　${x[1]}<small class="muted"> · ${x[2]}</small></div>`).join("")}</div>
-  </div>
-  <div class="section-head"><h2>国际赛事</h2><a class="muted" href="#/events">查看全部 →</a></div>
-  <div class="grid">${recent.map(eventCard).join("")}</div>
-  <div class="section-head"><h2>四大赛区</h2></div>
-  <div class="grid4">${Object.entries(D.teams).map(([r,a])=>`<a class="card" href="#/teams?region=${r}"><span class="eyebrow">${r}</span><h3>${regionName[r]}</h3><p class="muted">${a.length} 支档案战队</p></a>`).join("")}</div>
-  <div class="section-head"><h2>资料说明</h2></div>
-  <div class="notice">本版本严格以《TPA战队档案.pdf》中的战队、冠军、亚军、国际赛赛程和 2026 赛历为核心。PDF 部分 2026 页面存在标题/日期排版冲突，网站以“2026 Competition Calendar”作为赛季时间轴，并在具体赛事页保留来源提示。常规赛是为了让网站具备职业联赛索引结构而补齐的“赛制框架”，不冒充 PDF 中未提供的真实比赛结果。</div>
+  <section class="hero-banner hero"><div><div class="eyebrow">TPA CHAMPIONS TOUR · OFFICIAL-STYLE DATABASE</div><h1>一站式看完 TPA 的赛事、赛程、战队与历史。</h1><p>以你的《TPA战队档案.pdf》为主数据源，重做成更接近职业赛事官网的信息架构：赛事时间轴、比赛卡片、双败淘汰赛、战队档案、选手名单、积分榜与全球历史全部串起来。</p><div class="pillbar"><a class="pill active" href="#/events">进入赛事中心</a><a class="pill" href="#/schedule">查看今日式赛程</a><a class="pill" href="#/history">查看全部历史</a></div></div></section>
+  <div class="stat-grid" style="margin-top:18px"><div class="stat"><strong>4</strong><span>四大赛区</span></div><div class="stat"><strong>54</strong><span>档案战队</span></div><div class="stat"><strong>12</strong><span>2024–26 国际赛事</span></div><div class="stat"><strong>${D.globalHistory.length+12}</strong><span>全球历史赛事记录</span></div></div>
+  <div class="section-head"><h2>2026 赛季时间轴</h2><a class="muted" href="#/events">赛事中心 →</a></div>
+  <div class="card">${D.calendar2026.map(x=>`<div class="match"><div class="format">${esc(x[0])}</div><div class="team">${esc(x[1])}</div><div class="score">·</div><div class="team right">${esc(x[2]||'TPA')}</div><div class="format">${esc(x[3]||'')}</div></div>`).join('')}</div>
+  <div class="section-head"><h2>最近国际赛事</h2><a class="muted" href="#/events">全部 →</a></div><div class="grid">${recent.map(eventCard).join('')}</div>
+  <div class="section-head"><h2>四大赛区</h2></div><div class="grid4">${Object.entries(D.teams).map(([r,a])=>`<a class="card" href="#/teams?region=${r}"><div class="eyebrow">${r}</div><h3>${regions[r]}</h3><p class="muted">${a.length} 支战队 · 选手档案 · 赛区冠军历史</p></a>`).join('')}</div>
+  <div class="section-head"><h2>数据口径</h2></div><div class="notice">冠军、亚军、决赛比分、战队、选手等优先采用 PDF。PDF 未逐场给出的历史对阵不伪造比分；网站只展示赛制结构与“档案未提供”。选手国籍只有在档案明确注明时才显示，否则标为“档案未注明”，不根据姓名猜测。</div>
  </div>`;
 }
 function events(){
- return `<div class="container"><div class="hero"><div class="eyebrow">EVENT INDEX</div><h1>赛事中心</h1><p>按年份、赛事级别查看 TPA 的地区赛与国际赛。</p></div>
- <div class="pillbar">${[2026,2025].map(y=>`<a class="filter pill" href="#/events?year=${y}">${y}</a>`).join("")}<a class="filter pill" href="#/schedule">地区常规赛赛程</a></div>
- <div class="section-head"><h2>国际赛事</h2></div><div class="grid">${D.international.map(eventCard).join("")}</div>
- <div class="section-head"><h2>四大赛区近年常规赛</h2></div>
- <div class="grid4">${Object.keys(D.teams).map(r=>`<a class="card" href="#/schedule?region=${r}"><span class="eyebrow">${r}</span><h3>${regionName[r]}</h3><p class="muted">2021–2026 KickOff / Stage 1 / Stage 2</p></a>`).join("")}</div>
+ const years=[...new Set(D.international.map(e=>e.year))].sort((a,b)=>b-a);
+ return `<div class="container"><div class="hero"><div class="eyebrow">EVENTS & STANDINGS</div><h1>赛事中心</h1><p>国际赛采用“赛事 → 赛程 → 淘汰赛 → 冠军阵容”的浏览方式；历史档案另设全球赛事库。</p></div>
+ <div class="section-head"><h2>2024–2026 国际赛事</h2></div><div class="grid">${D.international.map(eventCard).join('')}</div>
+ <div class="section-head"><h2>四大赛区赛事</h2></div><div class="grid4">${Object.entries(D.regional_champs).map(([r,ys])=>`<a class="card" href="#/schedule?region=${r}"><div class="eyebrow">${regions[r]}</div><h3>KickOff / Stage 1 / Stage 2</h3><p class="muted">${Object.keys(ys).length} 个赛季冠军档案</p></a>`).join('')}</div>
+ <div class="section-head"><h2>完整历史入口</h2></div><a class="card" href="#/history"><b>2013–2026 全球赛事档案</b><p class="muted">2013–2023 按 PDF 的 Competition Finals 城市/年份/冠军/亚军保存；2024–2026 使用具体赛事名称与结果。</p></a></div>`;
+}
+function eventPage(id){
+ const e=D.international.find(x=>x.id===id); if(!e)return `<div class="container empty">赛事不存在</div>`;
+ const br=D.brackets?.[id]||[], sched=D.eventSchedule?.[id]||[];
+ return `<div class="container"><div class="hero"><div class="eyebrow">${e.year} · ${esc(e.type||'GLOBAL EVENT')}</div><h1>${esc(e.name)}</h1><p>${esc(e.date||'档案未提供具体日期')} · ${esc(e.city||'')} ${e.venue?'· '+esc(e.venue):''}</p></div>
+ <div class="stat-grid"><div class="stat"><strong>${esc(e.champion)}</strong><span>冠军</span></div><div class="stat"><strong>${esc(e.runner)}</strong><span>亚军</span></div><div class="stat"><strong>${esc(e.finalScore||'—')}</strong><span>总决赛</span></div><div class="stat"><strong>${esc((e.teams||[]).length)}</strong><span>档案参赛队</span></div></div>
+ <div class="section-head"><h2>赛事赛制</h2></div><div class="card"><p>${esc(e.format||'档案未提供')}</p><p class="source">${esc(e.source||'来源：TPA战队档案.pdf')}</p></div>
+ <div class="section-head"><h2>赛程</h2></div><div class="card">${sched.length?sched.map(x=>`<div class="match"><div class="format">${esc(x[0])}</div><div class="team">${esc(x[1])}</div><div class="score">${esc(x[2]||'—')}</div><div class="team right">${esc(x[3]||'—')}</div><div class="format">${esc(x[4]||'BO3')}</div></div>`).join(''):`<div class="notice">PDF 没有提供逐场赛程，本页不编造历史对阵。</div>`}</div>
+ <div class="section-head"><h2>淘汰赛 / Bracket</h2></div><div class="bracket-wrap"><div class="bracket">${br.length?br.map(m=>`<div class="round"><h3>${esc(m[0]||'淘汰赛')}</h3><div class="bracket-match"><small class="${m[6]==='documented'?'doc':'gen'}">${m[6]==='documented'?'PDF 已记录':'结构补全'}</small><div class="bm-row"><span>${esc(m[1])}</span><b>${esc(m[2])}</b></div><div class="bm-row"><span>${esc(m[3])}</span><b>${esc(m[4])}</b></div><small class="muted">${esc(m[5]||'')}</small></div></div>`).join(''):`<div class="notice">该历史记录仅有总决赛结果，PDF 未提供完整 bracket。</div>`}</div></div>
+ <div class="section-head"><h2>参赛战队</h2></div><div class="grid">${(e.teams||[]).map(teamCard).join('')}</div>
  </div>`;
 }
 function schedule(){
- const params=new URLSearchParams(location.hash.split("?")[1]||"");
- const region=params.get("region")||"CN";
- const years=[2026,2025,2024,2023,2022,2021];
- const arr=D.teams[region]||D.teams.CN;
- const sample=arr.slice(0,8);
- let rows=[];
- for(const y of years){
-  for(const stage of ["KickOff","Stage 1","Stage 2"]){
-   const c=D.regional_champs[region]?.[y];
-   if(!c) continue;
-   rows.push(`<div class="schedule-day"><div style="display:flex;justify-content:space-between"><b>${y} · ${stage}</b><span class="muted">${regionName[region]}</span></div>
-    <div class="match"><div class="format">Week 1</div><div class="team">${esc(sample[0])}</div><div class="score">—</div><div class="team right">${esc(sample[1])}</div><div class="format">BO3</div></div>
-    <div class="match"><div class="format">Week 2</div><div class="team">${esc(sample[2])}</div><div class="score">—</div><div class="team right">${esc(sample[3])}</div><div class="format">BO3</div></div>
-    <div class="match"><div class="format">Week 3</div><div class="team">${esc(sample[4])}</div><div class="score">—</div><div class="team right">${esc(sample[5])}</div><div class="format">BO3</div></div>
-    <div class="match"><div class="format">Playoffs</div><div class="team">${esc(c[0])}</div><div class="score">冠军</div><div class="team right">${esc(c[1])}</div><div class="format">亚军</div></div>
-   </div>`);
-  }
- }
- return `<div class="container"><div class="hero"><div class="eyebrow">REGIONAL SCHEDULE</div><h1>四大赛区常规赛</h1><p>统一采用职业联赛式索引：常规赛 → 季后赛 → 赛区冠军。未在 PDF 中出现的具体比分保持“—”，避免把补全赛程误写成真实历史结果。</p></div>
- <div class="pillbar">${Object.keys(D.teams).map(r=>`<a class="filter pill ${r===region?'active':''}" href="#/schedule?region=${r}">${regionName[r]}</a>`).join("")}</div>
- <div class="notice" style="margin:18px 0">赛制框架：12/14/16 队按赛区规模进行分组或单循环常规赛，随后进入季后赛；页面只锁定 PDF 已给出的冠军/亚军，常规赛具体对阵作为站内赛程骨架。</div>
- ${rows.join("")}</div>`;
-}
-function eventPage(id){
- const e=D.international.find(x=>x.id===id); if(!e) return `<div class="container"><div class="empty">找不到赛事</div></div>`;
- const br=D.brackets[id]||[];
- return `<div class="container">
-  <div class="hero"><div class="eyebrow">${e.year} · ${esc(e.type)}</div><h1>${esc(e.name)}</h1><p>${esc(e.date)} · ${esc(e.city)}</p></div>
-  <div class="grid4"><div class="stat"><strong>${esc(e.champion)}</strong><span>冠军</span></div><div class="stat"><strong>${esc(e.runner)}</strong><span>亚军</span></div><div class="stat"><strong>${esc(e.mvp)}</strong><span>MVP</span></div><div class="stat"><strong>${esc(e.teams.length)}</strong><span>页面已列参赛队</span></div></div>
-  <div class="section-head"><h2>赛事赛制</h2></div><div class="card"><p>${esc(e.format)}</p><p class="source">${esc(e.source)}</p></div>
-  <div class="section-head"><h2>赛程 / 对阵</h2></div>
-  <div class="card"><div class="notice">本页把历史赛事补成职业电竞官网式赛程。<b>冠军、亚军及总决赛比分锁定为 PDF 第15页记录；其余没有被档案记录的对阵仅作为“赛制补全”，不视为真实历史比分。</b></div>
-  <div style="margin-top:14px">${(D.eventSchedule?.[id]||[]).map(x=>`<div class="match"><div class="format">${esc(x[0])}</div><div class="team">${esc(x[1])}</div><div class="score">${esc(x[2])}</div><div class="team right">${esc(x[3])}</div><div class="format">${esc(x[3])}</div></div>`).join("")}</div></div>
-  <div class="bracket"><div class="round"><h3>淘汰赛结构</h3>${br.map((m,i)=>`<div class="bracket-match"><small>${esc(m[0])} · ${esc(m[6])}</small><div class="bm-row ${m[6]==='documented'?'winner':''}"><span>${esc(m[1])}</span><b>${esc(m[2])}</b></div><div class="bm-row ${m[6]==='documented'?'winner':''}"><span>${esc(m[3])}</span><b>${esc(m[4])}</b></div><small class="muted">${esc(m[5])}</small></div>`).join("")}</div>
-   <div class="round"><h3>赛事队伍</h3>${e.teams.map(teamCard).join("")}</div>
-   <div class="round"><h3>赛事信息</h3><div class="card"><p><b>举办地</b><br>${esc(e.city)}</p><p><b>日期</b><br>${esc(e.date)}</p><p><b>冠军</b><br>${esc(e.champion)}</p><p><b>亚军</b><br>${esc(e.runner)}</p></div></div>
-  </div>
-  </div>`;
+ const p=new URLSearchParams(location.hash.split('?')[1]||''), r=p.get('region')||'CN';
+ const teams=D.teams[r]||[];
+ const seasons=[2026,2025,2024,2023,2022,2021];
+ return `<div class="container"><div class="hero"><div class="eyebrow">SCHEDULE</div><h1>四大赛区赛程</h1><p>把四大联赛放进同一套职业赛事信息架构。PDF 已明确的冠军/亚军真实保留，未提供的逐场比分显示为“—”。</p></div>
+ <div class="pillbar">${Object.keys(D.teams).map(x=>`<a class="pill ${x===r?'active':''}" href="#/schedule?region=${x}">${regions[x]}</a>`).join('')}</div>
+ <div class="section-head"><h2>${regions[r]} · 战队池</h2></div><div class="grid">${teams.map(teamCard).join('')}</div>
+ <div class="section-head"><h2>赛季索引</h2></div>${seasons.map(y=>{const c=D.regional_champs?.[r]?.[y];return `<div class="schedule-day"><b>${y} Season</b><div class="match"><div class="format">KickOff</div><div class="team">${c?esc(c[0]):'—'}</div><div class="score">${c?'冠军':''}</div><div class="team right">${c?esc(c[1]):'—'}</div><div class="format">Stage / Playoffs</div></div><div class="muted">Stage 1 → Stage 2 → Playoffs · 具体逐场赛程以档案提供范围为准</div></div>`}).join('')}</div>`;
 }
 function teamsPage(){
- const params=new URLSearchParams(location.hash.split("?")[1]||""); const r=params.get("region");
- const all=Object.entries(D.teams).flatMap(([region,arr])=>arr.map(t=>({t,region}))).filter(x=>!r||x.region===r);
- return `<div class="container"><div class="hero"><div class="eyebrow">TEAMS DATABASE</div><h1>战队索引</h1><p>54 支档案战队，按四大赛区浏览；卡片使用 PDF 中的队标素材。</p></div>
- <div class="pillbar">${Object.keys(D.teams).map(x=>`<a class="filter pill ${r===x?'active':''}" href="#/teams?region=${x}">${regionName[x]}</a>`).join("")}</div>
- <div class="grid" style="margin-top:18px">${all.map(x=>teamCard(x.t)).join("")}</div></div>`;
+ const p=new URLSearchParams(location.hash.split('?')[1]||''), r=p.get('region');
+ const all=Object.entries(D.teams).flatMap(([reg,a])=>a.map(t=>({t,reg}))).filter(x=>!r||x.reg===r);
+ return `<div class="container"><div class="hero"><div class="eyebrow">TEAMS</div><h1>战队数据库</h1><p>54 支档案战队。队标使用档案素材做了高清化、透明化和统一比例处理，页面不再出现原来的黑方框缩略图。</p></div><div class="pillbar"><a class="pill ${!r?'active':''}" href="#/teams">全部</a>${Object.keys(D.teams).map(x=>`<a class="pill ${r===x?'active':''}" href="#/teams?region=${x}">${regions[x]}</a>`).join('')}</div><div class="grid" style="margin-top:18px">${all.map(x=>teamCard(x.t)).join('')}</div></div>`;
 }
 function teamPage(team){
- const t=teamObj(team), players=D.rosters[team]||[];
- return `<div class="container team-page"><div class="team-head">${logo(team)?`<img class="logo" src="${logo(team)}">`:""}<div><div class="eyebrow">${regionName[t.region]||"TEAM"}</div><h1 style="margin:5px 0">${esc(team)}</h1><p class="muted">当前档案名单 · 来源：TPA战队档案.pdf</p></div></div>
- <div class="section-head"><h2>当前选手名单</h2></div><div class="roster">${players.map((p,i)=>`<div class="player"><small>${["TOP","JUG","MID","ADC","SUP"][i]||"PLAYER"}</small><br><b>${esc(p)}</b></div>`).join("")}</div>
- <div class="section-head"><h2>赛区历年冠军</h2></div><div class="grid4">${Object.entries(D.regional_champs[t.region]||{}).reverse().map(([y,c])=>`<div class="card"><span class="history-year">${y}</span><p>${esc(c[0])} <span class="muted">vs</span> ${esc(c[1])}</p></div>`).join("")}</div>
- </div>`;
+ const r=findRegion(team), ps=D.rosters[team]||[];
+ return `<div class="container"><div class="team-head"><img class="logo" src="${logo(team)}"><div><div class="eyebrow">${regions[r]}</div><h1 style="margin:5px 0">${esc(team)}</h1><p class="muted">当前档案名单 · 选手国籍只有档案明确注明时才显示。</p></div></div>
+ <div class="section-head"><h2>当前选手</h2></div><div class="roster">${ps.map((p,i)=>{const meta=D.playerMeta?.[p]||{};const roles=['TOP','JUG','MID','ADC','SUP'];return `<div class="player"><small>${roles[i]||'PLAYER'}</small><br><b>${esc(p)}</b><span class="nation">国籍/地区：${esc(meta.nationality||'档案未注明')}<br>注册赛区：${esc(regions[r]||r)}</span></div>`}).join('')}</div>
+ <div class="section-head"><h2>赛区历史冠军</h2></div><div class="grid4">${Object.entries(D.regional_champs?.[r]||{}).sort((a,b)=>b[0]-a[0]).map(([y,c])=>`<div class="card"><div class="eyebrow">${y}</div><p><b>${esc(c[0])}</b> <span class="muted">3:${esc(c[2]||'?')} vs</span> ${esc(c[1])}</p></div>`).join('')}</div></div>`;
 }
 function rankings(){
- const rows=[["NRG",3018],["E1",2840],["MG",2736],["G2",1500],["PaperRex",1438],["BLG",1280],["AG.AL",936],["GiantX",846],["Karmine Corp",642],["Sentinels",492]];
- return `<div class="container"><div class="hero"><div class="eyebrow">POWER RANKING</div><h1>战队战力榜</h1><p>按 PDF 第 9 页的 Team Combat Power Ranking 展示已明确的积分。</p></div>
- <div class="card"><table class="table"><thead><tr><th>#</th><th>战队</th><th>积分</th></tr></thead><tbody>${rows.map((r,i)=>`<tr><td class="rank">${i+1}</td><td>${esc(r[0])}</td><td><b>${r[1]}</b></td></tr>`).join("")}</tbody></table></div></div>`;
+ const rows=(D.rankings||[]).slice(0,20);
+ return `<div class="container"><div class="hero"><div class="eyebrow">GLOBAL POWER RANKINGS</div><h1>战队战力榜</h1><p>按 PDF 第 9 页 Team Combat Power Ranking 展示积分，不额外计算。</p></div><div class="card">${rows.map((r,i)=>`<div class="rank-row"><div class="rank-num">${i+1}</div><div><b>${esc(r[0])}</b><div class="bar"><i style="width:${Math.min(100,(r[1]/rows[0][1])*100)}%"></i></div></div><div><b>${esc(r[1])}</b><div class="muted">PTS</div></div><div class="rank-extra muted">PDF Ranking</div></div>`).join('')}</div></div>`;
 }
-function historyPage(){
- const reg=["CN","PAC","EMEA","AMER"];
- return `<div class="container"><div class="hero"><div class="eyebrow">HALL OF CHAMPIONS</div><h1>历届冠军</h1><p>2013–2025 四大赛区的冠军、比分与亚军；数据来自 PDF 的 Competition Finals & Champions。</p></div>
- ${reg.map(r=>`<div class="section-head"><h2>${regionName[r]}</h2></div><div class="card"><table class="table"><thead><tr><th>年份</th><th>冠军</th><th>比分</th><th>亚军</th></tr></thead><tbody>${D.history.filter(x=>x[1]===r).map(x=>`<tr><td>${x[0]}</td><td><b>${esc(x[2])}</b></td><td>${x[4]}</td><td>${esc(x[3])}</td></tr>`).join("")}</tbody></table></div>`).join("")}</div>`;
+function history(){
+ const rows=D.globalHistory;
+ return `<div class="container"><div class="hero"><div class="eyebrow">GLOBAL ARCHIVE</div><h1>历届全球赛事</h1><p>2013–2023 保留 PDF Competition Finals 的城市、年份、冠军、决赛比分与亚军；不擅自给没有标注的赛事加上 Masters / TCI / Finals 标签。2024–2026 则进入具体赛事页。</p></div>
+ <div class="section-head"><h2>2013–2023 Competition Finals</h2></div><div style="overflow:auto"><table class="archive-table"><thead><tr><th>年份</th><th>城市</th><th>冠军</th><th>比分</th><th>亚军</th></tr></thead><tbody>${rows.map(x=>`<tr><td>${x[0]}</td><td>${esc(x[1])}</td><td class="winner-chip"><strong>${esc(x[2])}</strong></td><td class="score-chip">${x[3]}</td><td>${esc(x[4])}</td></tr>`).join('')}</tbody></table></div>
+ <div class="section-head"><h2>2024–2026 已命名国际赛事</h2></div><div class="grid">${D.international.map(eventCard).join('')}</div>
+ <div class="section-head"><h2>四大赛区历届冠军</h2></div><div class="grid4">${Object.entries(D.regional_champs).map(([r,ys])=>`<div class="card"><div class="eyebrow">${regions[r]}</div>${Object.entries(ys).sort((a,b)=>b[0]-a[0]).map(([y,c])=>`<div class="match"><div class="format">${y}</div><div class="team">${esc(c[0])}</div><div class="score">CHAMP</div><div class="team right">${esc(c[1])}</div><div class="format">RU</div></div>`).join('')}</div>`).join('')}</div></div>`;
 }
-function render(){
- const h=location.hash||"#/"; const parts=h.replace(/^#\//,"").split("?")[0].split("/");
- if(parts[0]==="") app.innerHTML=home();
- else if(parts[0]==="events") app.innerHTML=events();
- else if(parts[0]==="schedule") app.innerHTML=schedule();
- else if(parts[0]==="event") app.innerHTML=eventPage(decodeURIComponent(parts[1]||""));
- else if(parts[0]==="teams") app.innerHTML=teamsPage();
- else if(parts[0]==="team") app.innerHTML=teamPage(decodeURIComponent(parts[1]||""));
- else if(parts[0]==="rankings") app.innerHTML=rankings();
- else if(parts[0]==="history") app.innerHTML=historyPage();
- else app.innerHTML=home();
- window.scrollTo(0,0); document.body.classList.remove("nav-open");
+function route(){
+ const [path,tail]=location.hash.slice(1).split('?'); const p=path||'/';
+ let html;
+ if(p==='/')html=home(); else if(p==='/events')html=events(); else if(p==='/schedule')html=schedule(); else if(p==='/teams')html=teamsPage(); else if(p==='/rankings')html=rankings(); else if(p==='/history')html=history(); else if(p.startsWith('/event/'))html=eventPage(decodeURIComponent(p.slice(7))); else if(p.startsWith('/team/'))html=teamPage(decodeURIComponent(p.slice(6))); else html=home();
+ app.innerHTML=html; window.scrollTo(0,0);
+ document.querySelectorAll('.topbar nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${p}`));
 }
-window.addEventListener("hashchange",render); render();
+window.addEventListener('hashchange',route); route();

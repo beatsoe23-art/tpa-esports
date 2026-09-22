@@ -1,32 +1,26 @@
-# TPA Esports v2
+# TPA Esports v4 — Complete Database
 
-这是一个 GitHub Pages 静态电竞赛事数据库。
+这是重新设计后的 GitHub Pages 静态赛事数据库。
 
-## 已包含
-- 首页 / 赛事中心 / 赛程 / 战队 / 战力榜 / 历届冠军
-- 四大赛区：CN、Pacific、EMEA、AMER
-- 2021–2026 地区赛索引：KickOff / Stage 1 / Stage 2
-- 2025–2026 TPA 国际赛事页面
-- 世界赛/大师赛/TCI 的已知对阵和比分
-- PDF 中的战队 Logo 素材
-- PDF 中的当前档案选手名单
-- 移动端适配
+## 本版重点
+- 参考职业赛事官网的信息架构：赛事中心 / 赛程 / 战队 / 排名 / 历届 / 赛事详情 / bracket。
+- 54 支 PDF 档案战队全部可浏览。
+- PDF 中的 2024–2026 国际赛事结果保留；2013–2023 全球 Competition Finals 城市、年份、冠军、比分、亚军全部进入历史库。
+- 四大赛区 CN / Pacific / EMEA / AMER 的冠军历史全部可视化。
+- 选手名单全部来自 PDF 当前档案；国籍没有明确记录的选手显示“档案未注明”，不根据姓名猜测。
+- 原 PDF 队标做了透明背景、统一尺寸、高清化和锐化处理，避免黑色方框。
+- 2026 赛历以 PDF 的 “2026 Competition Calendar” 作为赛季时间轴。
+- 未在 PDF 中出现的历史逐场比分不会伪造；页面会明确显示档案缺失。
 
-## 数据原则
-1. 世界赛和国际赛事的冠军、亚军、赛程/对阵以《TPA战队档案.pdf》为核心来源。
-2. 四大赛区常规赛是为了形成职业电竞官网式的系统索引而补齐的赛程框架；没有在 PDF 中出现的真实比分不伪造，显示为“—”。
-3. 2026 PDF 个别页面存在标题与日期字段冲突；网站以 PDF 第2页“2026 Competition Calendar”作为赛季时间轴，并在赛事页标注冲突。
-4. 站点的页面结构参考现代电竞赛事网站的信息架构，不复制第三方站点的品牌视觉。
+## 真实数据口径
+2013–2023 全球历史来自 PDF 第 15 页 Competition Finals 表；2024–2026 国际赛冠军/亚军/决赛比分来自同页及对应赛事页。具体引用关系见原始 PDF。
 
 ## GitHub Pages
-把本目录内的所有文件上传到仓库根目录，覆盖旧版 `index.html`、`style.css`、`app.js`，并上传 `data.js` 和 `assets/` 文件夹。GitHub Pages 会自动重新部署。
+上传/替换仓库根目录中的：
+- `index.html`
+- `app.js`
+- `data.js`
+- `style.css`
+- `assets/`
 
-
-## 历史世界赛补全
-2024 年新增：
-- TPA 全球大师赛·马德里：MG 3:0 Sentinels
-- TPA 季中冠军赛·成都：MG 3:1 Bilibili Gaming
-- TPA 全球大师赛·巴黎：E1 3:1 LNG ESPORTS
-- TPA 全球总决赛·伦敦：Edward Gaming 3:2 Team Heretics
-
-以上冠亚军及决赛比分直接取自 PDF 第15页。其他比赛按 PDF 中已有赛制描述，并参考职业赛事常见的 Swiss / 双败结构生成“赛制补全”，不会冒充 PDF 已记录的历史比分。
+然后 GitHub Pages 继续使用 `main / (root)`。
