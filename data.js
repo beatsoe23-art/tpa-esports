@@ -556,7 +556,8 @@ window.TPA_DATA = {
       ],
       "format": "赛制补全：8队瑞士轮 → 4队双败淘汰；系列赛以 BO3/BO5 为主，决赛 BO5。",
       "source": "《TPA战队档案.pdf》P15：Madrid 2024 · MG 3:0 Sentinels",
-      "finalScore": "3:0"
+      "finalScore": "3:0",
+      "historyType": "Masters"
     },
     {
       "id": "tci-chengdu-2024",
@@ -580,7 +581,8 @@ window.TPA_DATA = {
       ],
       "format": "赛制补全：8支二/三号种子进入瑞士轮，2胜晋级；4支晋级队 + 4支一号种子进入8队双败淘汰，决赛 BO5。",
       "source": "《TPA战队档案.pdf》P15：Chengdu 2024 · MG 3:1 BLG",
-      "finalScore": "3:1"
+      "finalScore": "3:1",
+      "historyType": "TCI"
     },
     {
       "id": "masters-paris-2024",
@@ -604,7 +606,8 @@ window.TPA_DATA = {
       ],
       "format": "赛制补全：8队瑞士轮 → 4队双败淘汰；决赛 BO5。",
       "source": "《TPA战队档案.pdf》P15：Paris 2024 · E1 3:1 LNG",
-      "finalScore": "3:1"
+      "finalScore": "3:1",
+      "historyType": "Masters"
     },
     {
       "id": "finals-london-2024",
@@ -636,7 +639,8 @@ window.TPA_DATA = {
       ],
       "format": "赛制补全：16队分4组，每组4队双败；8队晋级后进行8队双败淘汰；决赛 BO5。",
       "source": "《TPA战队档案.pdf》P15：London 2024 · EDG 3:2 TH",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "Finals"
     },
     {
       "id": "masters-bangkok-2025",
@@ -656,7 +660,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
       "source": "PDF p10",
-      "finalScore": "3:1"
+      "finalScore": "3:1",
+      "historyType": "Masters"
     },
     {
       "id": "tci-vancouver-2025",
@@ -680,7 +685,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 8队双败淘汰",
       "source": "PDF p11",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "TCI"
     },
     {
       "id": "masters-toronto-2025",
@@ -700,7 +706,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
       "source": "PDF p12",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "Masters"
     },
     {
       "id": "finals-chengdu-2025",
@@ -732,7 +739,8 @@ window.TPA_DATA = {
       ],
       "format": "16队分组双败 → 8队双败淘汰",
       "source": "PDF p13",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "Finals"
     },
     {
       "id": "masters-pusan-2026",
@@ -752,7 +760,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
       "source": "PDF p16；PDF标题/日期存在排版冲突，以2026赛历页为主",
-      "finalScore": "3:1"
+      "finalScore": "3:1",
+      "historyType": "Masters"
     },
     {
       "id": "tci-london-2026",
@@ -776,7 +785,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 8队双败淘汰",
       "source": "PDF p17；页面日期字段与赛历页存在冲突",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "TCI"
     },
     {
       "id": "masters-santiago-2026",
@@ -798,7 +808,8 @@ window.TPA_DATA = {
       ],
       "format": "8队瑞士轮 → 4队双败淘汰",
       "source": "PDF p18",
-      "finalScore": "3:2"
+      "finalScore": "3:2",
+      "historyType": "Masters"
     },
     {
       "id": "finals-allen-2026",
@@ -813,7 +824,8 @@ window.TPA_DATA = {
       "teams": [],
       "format": "资格赛 → 排名赛 → 小组双败 → 淘汰赛双败",
       "source": "PDF p19–20",
-      "finalScore": "TBD"
+      "finalScore": "TBD",
+      "historyType": "Finals"
     }
   ],
   "calendar2026": [
@@ -3279,5 +3291,991 @@ window.TPA_DATA = {
       "nationality": "档案未注明",
       "region": "AMER"
     }
+  },
+  "teamCountry": {
+    "SUNING": "中国",
+    "Bilibili Gaming": "中国",
+    "Weibo Gaming": "中国",
+    "LNG ESPORTS": "中国",
+    "Invictus Gaming": "中国",
+    "JDG ESPORTS": "中国",
+    "Edward Gaming": "中国",
+    "FunPlusPhoenix": "中国",
+    "Royal Never Give up": "中国",
+    "Oh My God": "中国",
+    "DRG ESPORTS": "中国",
+    "AG.AL": "中国",
+    "WE ESPORTS": "中国",
+    "TEC": "中国",
+    "NINJAS IN PYJAMAS": "中国",
+    "Xian": "中国",
+    "E1 Esports": "韩国",
+    "MIC GAMING": "中国",
+    "Kiwoom DRX": "韩国",
+    "KT": "韩国",
+    "Full sense": "泰国",
+    "DetonatioN FocusMe": "日本",
+    "PaperRex": "新加坡",
+    "PG WON": "韩国",
+    "VARREL": "日本",
+    "Rex Regum Qeon": "菲律宾/东南亚",
+    "Team Secret": "菲律宾",
+    "ZETA DIVISION": "日本",
+    "Global Esports": "印度",
+    "NS": "韩国",
+    "BBL Esports": "土耳其",
+    "Fnatic": "欧洲",
+    "FUT Esports": "土耳其",
+    "GiantX": "欧洲",
+    "Karmine Corp": "法国",
+    "Gentle Mates": "法国",
+    "Natus Vincere": "欧洲",
+    "Team Heretics": "西班牙",
+    "Team Liquid": "欧洲",
+    "Team Vitality": "法国",
+    "Eternal Fire": "土耳其",
+    "PCIFIC": "欧洲",
+    "100 Thieves": "美国",
+    "Cloud9": "美国",
+    "Evil Geniuses": "美国",
+    "FURIA": "巴西",
+    "KRÜ Esports": "阿根廷",
+    "Leviatán": "阿根廷/拉美",
+    "LOUD": "巴西",
+    "MIBR": "巴西",
+    "NRG": "美国",
+    "Sentinels": "美国",
+    "G2 ESPORTS": "美国",
+    "Team Envy": "美国"
+  },
+  "playerCountry": {
+    "ANH": "韩国",
+    "Deoks": "韩国",
+    "Guss": "韩国",
+    "Siwoo": "韩国",
+    "JDG.Keem": "韩国",
+    "Viscount": "韩国",
+    "Hoya": "韩国",
+    "Weky": "韩国",
+    "Swai": "韩国",
+    "Peys": "韩国",
+    "Decade": "韩国",
+    "Vickey": "中国/韩国",
+    "Pgg": "中国",
+    "Knight": "中国",
+    "LK": "中国",
+    "Lemin": "中国",
+    "Canny": "中国",
+    "ON": "中国"
+  },
+  "historyEvents": [
+    {
+      "year": 2013,
+      "city": "Los Angeles",
+      "name": "Los Angeles · 全球赛事",
+      "champion": "Sentinels",
+      "runner": "Fnatic",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2014,
+      "city": "Los Angeles",
+      "name": "Los Angeles · 全球赛事",
+      "champion": "E1 Pulse",
+      "runner": "Loud",
+      "finalScore": "3:0"
+    },
+    {
+      "year": 2015,
+      "city": "Tallahassee",
+      "name": "Tallahassee · 全球赛事",
+      "champion": "Fnatic",
+      "runner": "RNG",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2015,
+      "city": "Seoul",
+      "name": "Seoul · 全球赛事",
+      "champion": "E1 Pulse",
+      "runner": "Team Envy",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2016,
+      "city": "Shanghai",
+      "name": "Shanghai · 全球赛事",
+      "champion": "E1 Pulse",
+      "runner": "Team Envy",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2016,
+      "city": "Paris",
+      "name": "Paris · 全球赛事",
+      "champion": "Fnatic",
+      "runner": "RNG",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2017,
+      "city": "São Paulo",
+      "name": "São Paulo · 全球赛事",
+      "champion": "E1 Pulse",
+      "runner": "MicGaming",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2017,
+      "city": "Chicago / NYC",
+      "name": "Chicago / NYC · 全球赛事",
+      "champion": "MicGaming",
+      "runner": "E1 Pulse",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2018,
+      "city": "Berlin / Paris",
+      "name": "Berlin / Paris · 全球赛事",
+      "champion": "RNG",
+      "runner": "PaperRex",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2018,
+      "city": "Shanghai",
+      "name": "Shanghai · 全球赛事",
+      "champion": "RareAtom",
+      "runner": "Fnatic",
+      "finalScore": "3:0"
+    },
+    {
+      "year": 2019,
+      "city": "Los Angeles",
+      "name": "Los Angeles · 全球赛事",
+      "champion": "G2",
+      "runner": "Sentinels",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2019,
+      "city": "Madrid",
+      "name": "Madrid · 全球赛事",
+      "champion": "FPX",
+      "runner": "G2",
+      "finalScore": "3:0"
+    },
+    {
+      "year": 2020,
+      "city": "—",
+      "name": "— · 全球赛事",
+      "champion": "EDG",
+      "runner": "FPX",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2020,
+      "city": "Shanghai",
+      "name": "Shanghai · 全球赛事",
+      "champion": "MicGaming",
+      "runner": "SUNING",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2021,
+      "city": "Reykjavík",
+      "name": "Reykjavík · 全球赛事",
+      "champion": "Sentinels",
+      "runner": "Team Envy",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2021,
+      "city": "Reykjavík",
+      "name": "Reykjavík · 全球赛事",
+      "champion": "SUNING",
+      "runner": "PaperRex",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2021,
+      "city": "Berlin",
+      "name": "Berlin · 全球赛事",
+      "champion": "Gambit",
+      "runner": "E1",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2021,
+      "city": "Reykjavík",
+      "name": "Reykjavík · 全球赛事",
+      "champion": "E1",
+      "runner": "PaperRex",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2022,
+      "city": "Reykjavík",
+      "name": "Reykjavík · 全球赛事",
+      "champion": "OTG",
+      "runner": "Loud",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2022,
+      "city": "Busan",
+      "name": "Busan · 全球赛事",
+      "champion": "Loud",
+      "runner": "E1",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2022,
+      "city": "Copenhagen",
+      "name": "Copenhagen · 全球赛事",
+      "champion": "FPX",
+      "runner": "PaperRex",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2022,
+      "city": "Atlanta",
+      "name": "Atlanta · 全球赛事",
+      "champion": "DRX",
+      "runner": "E1",
+      "finalScore": "3:2"
+    },
+    {
+      "year": 2023,
+      "city": "Japan",
+      "name": "Japan · 全球赛事",
+      "champion": "JDG",
+      "runner": "WBG",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2023,
+      "city": "London",
+      "name": "London · 全球赛事",
+      "champion": "JDG",
+      "runner": "BLG",
+      "finalScore": "3:1"
+    },
+    {
+      "year": 2023,
+      "city": "Beijing",
+      "name": "Beijing · 全球赛事",
+      "champion": "JDG",
+      "runner": "EG",
+      "finalScore": "3:0"
+    },
+    {
+      "year": 2023,
+      "city": "Seoul",
+      "name": "Seoul · 全球赛事",
+      "champion": "E1",
+      "runner": "WBG",
+      "finalScore": "3:0"
+    }
+  ],
+  "regionalRows": {
+    "CN": [
+      [
+        "2013",
+        "SPRING",
+        "RNG",
+        "WE"
+      ],
+      [
+        "2014",
+        "SPRING",
+        "EDG",
+        "RNG"
+      ],
+      [
+        "2015",
+        "SPRING",
+        "EDG",
+        "IG"
+      ],
+      [
+        "2015",
+        "SUMMER",
+        "RNG",
+        "WE"
+      ],
+      [
+        "2016",
+        "SPRING",
+        "IG",
+        "RareAtom"
+      ],
+      [
+        "2016",
+        "SUMMER",
+        "EDG",
+        "RNG"
+      ],
+      [
+        "2017",
+        "SPRING",
+        "WE",
+        "SUNING"
+      ],
+      [
+        "2017",
+        "SUMMER",
+        "SUNING",
+        "IG"
+      ],
+      [
+        "2018",
+        "SPRING",
+        "RNG",
+        "IG"
+      ],
+      [
+        "2018",
+        "SUMMER",
+        "RNG",
+        "RareAtom"
+      ],
+      [
+        "2019",
+        "SPRING",
+        "RNG",
+        "FPX"
+      ],
+      [
+        "2019",
+        "SUMMER",
+        "FPX",
+        "IG"
+      ],
+      [
+        "2020",
+        "SPRING",
+        "FPX",
+        "EDG"
+      ],
+      [
+        "2020",
+        "SUMMER",
+        "EDG",
+        "SUNING"
+      ],
+      [
+        "2021",
+        "KickOff",
+        "SUNING",
+        "FPX"
+      ],
+      [
+        "2021",
+        "Stage 1",
+        "SUNING",
+        "EDG"
+      ],
+      [
+        "2021",
+        "Stage 2",
+        "SUNING",
+        "FPX"
+      ],
+      [
+        "2022",
+        "KickOff",
+        "FPX",
+        "RareAtom"
+      ],
+      [
+        "2022",
+        "Stage 1",
+        "EDG",
+        "FPX"
+      ],
+      [
+        "2022",
+        "Stage 2",
+        "EDG",
+        "LNG"
+      ],
+      [
+        "2023",
+        "KickOff",
+        "JDG",
+        "WBG"
+      ],
+      [
+        "2023",
+        "Stage 1",
+        "JDG",
+        "BLG"
+      ],
+      [
+        "2023",
+        "Stage 2",
+        "JDG",
+        "BLG"
+      ],
+      [
+        "2024",
+        "KickOff",
+        "WBG",
+        "BLG"
+      ],
+      [
+        "2024",
+        "Stage 1",
+        "BLG",
+        "LNG"
+      ],
+      [
+        "2024",
+        "Stage 2",
+        "EDG",
+        "BLG"
+      ],
+      [
+        "2025",
+        "KickOff",
+        "BLG",
+        "AG.AL"
+      ],
+      [
+        "2025",
+        "Stage 1",
+        "BLG",
+        "AG.AL"
+      ],
+      [
+        "2025",
+        "Stage 2",
+        "BLG",
+        "AG.AL"
+      ],
+      [
+        "2026",
+        "KickOff",
+        "BLG",
+        "JDG ESPORTS"
+      ],
+      [
+        "2026",
+        "Stage 1",
+        "BLG",
+        "SUNING"
+      ]
+    ],
+    "PAC": [
+      [
+        "2013",
+        "SPRING",
+        "MicGaming",
+        "E1 Pulse"
+      ],
+      [
+        "2014",
+        "SPRING",
+        "MicGaming",
+        "E1 Pulse"
+      ],
+      [
+        "2015",
+        "SPRING",
+        "MIC GAMING",
+        "KT"
+      ],
+      [
+        "2016",
+        "SPRING",
+        "E1 Pulse",
+        "MicGaming"
+      ],
+      [
+        "2017",
+        "SPRING",
+        "PaperRex",
+        "MicGaming"
+      ],
+      [
+        "2018",
+        "SPRING",
+        "PaperRex",
+        "KT"
+      ],
+      [
+        "2019",
+        "SPRING",
+        "PGW",
+        "DRX"
+      ],
+      [
+        "2020",
+        "SPRING",
+        "MicGaming",
+        "PGW"
+      ],
+      [
+        "2021",
+        "KickOff",
+        "PaperRex",
+        "PGW"
+      ],
+      [
+        "2021",
+        "Stage 1",
+        "PaperRex",
+        "E1"
+      ],
+      [
+        "2021",
+        "Stage 2",
+        "E1",
+        "PaperRex"
+      ],
+      [
+        "2022",
+        "KickOff",
+        "E1",
+        "DRX"
+      ],
+      [
+        "2022",
+        "Stage 1",
+        "E1",
+        "PaperRex"
+      ],
+      [
+        "2022",
+        "Stage 2",
+        "E1",
+        "DRX"
+      ],
+      [
+        "2023",
+        "KickOff",
+        "MG",
+        "E1"
+      ],
+      [
+        "2023",
+        "Stage 1",
+        "MG",
+        "E1"
+      ],
+      [
+        "2023",
+        "Stage 2",
+        "MG",
+        "E1"
+      ],
+      [
+        "2024",
+        "KickOff",
+        "MG",
+        "PaperRex"
+      ],
+      [
+        "2024",
+        "Stage 1",
+        "MG",
+        "E1"
+      ],
+      [
+        "2024",
+        "Stage 2",
+        "PaperRex",
+        "NS"
+      ],
+      [
+        "2025",
+        "KickOff",
+        "PaperRex",
+        "E1"
+      ],
+      [
+        "2025",
+        "Stage 1",
+        "MG",
+        "PaperRex"
+      ],
+      [
+        "2025",
+        "Stage 2",
+        "PaperRex",
+        "MG"
+      ],
+      [
+        "2026",
+        "KickOff",
+        "PaperRex",
+        "MG"
+      ],
+      [
+        "2026",
+        "Stage 1",
+        "PaperRex",
+        "E1"
+      ]
+    ],
+    "EMEA": [
+      [
+        "2013",
+        "SPRING",
+        "Fnatic",
+        "FUT"
+      ],
+      [
+        "2014",
+        "SPRING",
+        "Fnatic",
+        "TL"
+      ],
+      [
+        "2015",
+        "SPRING",
+        "KC",
+        "TL"
+      ],
+      [
+        "2016",
+        "SPRING",
+        "Fnatic",
+        "Team Envy"
+      ],
+      [
+        "2017",
+        "SPRING",
+        "VIT",
+        "NAVI"
+      ],
+      [
+        "2017",
+        "SUMMER",
+        "Team Envy",
+        "VIT"
+      ],
+      [
+        "2018",
+        "SPRING",
+        "Fnatic",
+        "VIT"
+      ],
+      [
+        "2018",
+        "SUMMER",
+        "Fnatic",
+        "Team Envy"
+      ],
+      [
+        "2019",
+        "SPRING",
+        "VIT",
+        "Team Envy"
+      ],
+      [
+        "2019",
+        "SUMMER",
+        "TL",
+        "KC"
+      ],
+      [
+        "2020",
+        "SPRING",
+        "VIT",
+        "TL"
+      ],
+      [
+        "2020",
+        "SUMMER",
+        "TL",
+        "FUT"
+      ],
+      [
+        "2021",
+        "KickOff",
+        "Team Envy",
+        "BBL"
+      ],
+      [
+        "2021",
+        "Stage 1",
+        "Gambit",
+        "KC"
+      ],
+      [
+        "2021",
+        "Stage 2",
+        "Gambit",
+        "Fnatic"
+      ],
+      [
+        "2022",
+        "KickOff",
+        "OTG",
+        "KC"
+      ],
+      [
+        "2022",
+        "Stage 1",
+        "VIT",
+        "OTG"
+      ],
+      [
+        "2022",
+        "Stage 2",
+        "KC",
+        "Fnatic"
+      ],
+      [
+        "2023",
+        "KickOff",
+        "KC",
+        "BBL"
+      ],
+      [
+        "2023",
+        "Stage 1",
+        "Gambit",
+        "TL"
+      ],
+      [
+        "2023",
+        "Stage 2",
+        "TL",
+        "Fnatic"
+      ],
+      [
+        "2024",
+        "KickOff",
+        "Fnatic",
+        "TH"
+      ],
+      [
+        "2024",
+        "Stage 1",
+        "Fnatic",
+        "TH"
+      ],
+      [
+        "2024",
+        "Stage 2",
+        "TH",
+        "TL"
+      ],
+      [
+        "2025",
+        "KickOff",
+        "TH",
+        "Fnatic"
+      ],
+      [
+        "2025",
+        "Stage 1",
+        "KC",
+        "TH"
+      ],
+      [
+        "2025",
+        "Stage 2",
+        "TL",
+        "KC"
+      ],
+      [
+        "2026",
+        "KickOff",
+        "KC",
+        "Fnatic"
+      ],
+      [
+        "2026",
+        "Stage 1",
+        "TH",
+        "TL"
+      ]
+    ],
+    "AMER": [
+      [
+        "2013",
+        "SPRING",
+        "Sentinels",
+        "Loud"
+      ],
+      [
+        "2014",
+        "SPRING",
+        "Loud",
+        "EG"
+      ],
+      [
+        "2015",
+        "SPRING",
+        "Loud",
+        "Sentinels"
+      ],
+      [
+        "2016",
+        "SPRING",
+        "Sentinels",
+        "Loud"
+      ],
+      [
+        "2016",
+        "SUMMER",
+        "EG",
+        "Loud"
+      ],
+      [
+        "2017",
+        "SPRING",
+        "G2",
+        "Sentinels"
+      ],
+      [
+        "2017",
+        "SUMMER",
+        "Sentinels",
+        "G2"
+      ],
+      [
+        "2018",
+        "SPRING",
+        "Sentinels",
+        "100T"
+      ],
+      [
+        "2018",
+        "SUMMER",
+        "G2",
+        "Sentinels"
+      ],
+      [
+        "2019",
+        "SPRING",
+        "G2",
+        "Sentinels"
+      ],
+      [
+        "2019",
+        "SUMMER",
+        "G2",
+        "Sentinels"
+      ],
+      [
+        "2020",
+        "SPRING",
+        "Sentinels",
+        "LEV"
+      ],
+      [
+        "2020",
+        "SUMMER",
+        "G2",
+        "Cloud9"
+      ],
+      [
+        "2021",
+        "KickOff",
+        "Sentinels",
+        "G2"
+      ],
+      [
+        "2021",
+        "Stage 1",
+        "Sentinels",
+        "G2"
+      ],
+      [
+        "2021",
+        "Stage 2",
+        "G2",
+        "Cloud9"
+      ],
+      [
+        "2022",
+        "KickOff",
+        "Loud",
+        "G2"
+      ],
+      [
+        "2022",
+        "Stage 1",
+        "Loud",
+        "G2"
+      ],
+      [
+        "2022",
+        "Stage 2",
+        "G2",
+        "Loud"
+      ],
+      [
+        "2023",
+        "KickOff",
+        "EG",
+        "G2"
+      ],
+      [
+        "2023",
+        "Stage 1",
+        "EG",
+        "G2"
+      ],
+      [
+        "2023",
+        "Stage 2",
+        "G2",
+        "Sentinels"
+      ],
+      [
+        "2024",
+        "KickOff",
+        "Sentinels",
+        "G2"
+      ],
+      [
+        "2024",
+        "Stage 1",
+        "G2",
+        "EG"
+      ],
+      [
+        "2024",
+        "Stage 2",
+        "G2",
+        "Cloud9"
+      ],
+      [
+        "2025",
+        "KickOff",
+        "G2",
+        "NRG"
+      ],
+      [
+        "2025",
+        "Stage 1",
+        "G2",
+        "NRG"
+      ],
+      [
+        "2025",
+        "Stage 2",
+        "G2",
+        "NRG"
+      ],
+      [
+        "2026",
+        "KickOff",
+        "NRG",
+        "EG"
+      ],
+      [
+        "2026",
+        "Stage 1",
+        "G2",
+        "NRG"
+      ]
+    ]
   }
 };
